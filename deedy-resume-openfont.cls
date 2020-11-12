@@ -22,7 +22,7 @@
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor} 
 \definecolor{date}{HTML}{666666}
-\definecolor{name}{HTML}{FF8000}
+\definecolor{orange}{HTML}{FF8000}
 \definecolor{concrete}{HTML}{95A5A6}
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
@@ -51,7 +51,7 @@ Last Updated on \today
 \fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\selectfont #2
 } \\[3pt]
 \centering{
-\color{headings}
+\color{primary}
 \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
 \vspace{-15pt}
@@ -64,15 +64,15 @@ Last Updated on \today
 \newcommand{\sectionsep}{\vspace{8pt}}
 
 % Headings command
-\titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{14pt}{16pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\titleformat{\section}{\color{orange}
+\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{14pt}{16pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
-\color{name}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{concrete}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{name}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{concrete}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
