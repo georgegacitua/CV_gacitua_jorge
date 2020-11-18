@@ -21,9 +21,9 @@
 
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor} 
-\definecolor{date}{HTML}{666666}
 \definecolor{orange}{HTML}{FF8000}
-\definecolor{concrete}{HTML}{95A5A6}
+\definecolor{blue}{HTML}{045FB4}
+\definecolor{concrete}{HTML}{6E6E6E}
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
@@ -31,7 +31,7 @@
 % Set main fonts
 \usepackage{fontspec}
 \setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-BolIta,BoldFont=Lato-Bol,ItalicFont=Lato-LigIta]{Lato-Reg}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/roboto/]{Roboto-Regular}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -52,8 +52,8 @@ Last Updated on \today
 } \\[3pt]
 \centering{
 \color{primary}
-\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
-\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
+\fontspec[Path = fonts/roboto/]{Roboto-Regular}\fontsize{11pt}{14pt}\selectfont #3}
+\noindent\makebox[\linewidth]{\color{blue}\rule{\paperwidth}{0.5pt}}
 \vspace{-15pt}
 }
 
@@ -64,23 +64,23 @@ Last Updated on \today
 \newcommand{\sectionsep}{\vspace{8pt}}
 
 % Headings command
-\titleformat{\section}{\color{orange}
+\titleformat{\section}{\color{concrete}
 \scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{14pt}{16pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
-\color{concrete}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{orange}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{concrete}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{orange}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\color{blue}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
-% Location command
+% Location & Date command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
